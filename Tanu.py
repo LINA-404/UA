@@ -130,7 +130,7 @@ def main_select():
 
         os.system("xdg-open https://www.facebook.com/sumer.singh.33483903")
 
-	main()
+	main(')
 
     elif IKB =="0":
 
