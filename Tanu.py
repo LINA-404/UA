@@ -1017,7 +1017,7 @@ class automation:
 		fb_dtsg = re.search('name="fb_dtsg" value="(.*?)"',r).group(1)
 		jazoest = re.search('name="jazoest" value="(.*?)"',r).group(1)
 		data.update(
-		{
+		
 #created by adi
 #tottaly written by Mr Adi
 #!/usr/bin/python3
