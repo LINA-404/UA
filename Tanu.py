@@ -96,7 +96,7 @@ def main():
 
     os.system("clear")
 
-    print logo
+    print (logo) 
 
     print("")
 
