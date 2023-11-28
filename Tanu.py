@@ -186,7 +186,7 @@ def cek_apk(session,coki):
 	if len(game)==0:
 		print(f'\r%s [%s•%s] %sActive Apks & Web Not Found %s		'%(N,H,N,H,N))
 	else:
-		print(f'\r{A} [•]%s Active Apks & Web 👇 '%(H))
+		print(f'\r{A} [•]%s Active Apks & Web  '%(H))
 		for i in range(len(game)):
 			print(f"\r%s [%s] %s %s "%(D,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),D))
 	w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
@@ -196,7 +196,7 @@ def cek_apk(session,coki):
 	if len(game)==0:
 		print(f'\r%s [%s•%s] %sExpired Apks & Web Not Found %s		'%(N,M,N,M,N))
 	else:
-		print(f'\r{A} [•]%s Expired Apks & Web 👇 '%(M))
+		print(f'\r{A} [•]%s Expired Apks & Web  '%(M))
 		for i in range(len(game)):
 			print(f"\r%s [%s] %s %s "%(C,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),A))
 loop=0
@@ -227,7 +227,7 @@ def menu():
 				clear()
 				print(' All method working ')
 				linex()
-				print(' \033[1;33m[1] \033[1;37mMethod  (for mix ids)  \033[1;32m (fast) \n\033[1;33m [2] \033[1;37mMethod  (for mix ids) \033[1;32m  (best)  \n\033[1;33m [3]\033[1;37m Method  (with cokies)\033[1;32m   (v.fast) \n\033[1;33m [4]\033[1;37m Method  (for new ids)\033[1;32m   (best) \n \033[1;33m[5] \033[1;37mMethod  (for new ids) ')
+				print(' \033[1;35m[1] \033[1;36mMethod  (for mix ids)  \033[1;34m (fast) \n\033[1;35m [2] \033[1;36mMethod  (for mix ids) \033[1;34m  (best)  \n\033[1;35m [3]\033[1;36m Method  (with cokies)\033[1;35m   (v.fast) \n\033[1;34m [4]\033[1;36m Method  (for new ids)\033[1;35m   (best) \n \033[1;34m[5] \033[1;36mMethod  (for new ids) ')
 				linex()
 				mthd=input(' Choose: ')
 				linex()
@@ -253,7 +253,7 @@ def menu():
 					clear()
 					total_ids = str(len(fo))
 					print(' Total account ids : \033[1;32m'+total_ids+f' ')
-					print(' \033[1;37mThe process is running in the background')
+					print(' \033[1;35mThe process is running in the background')
 					linex()
 					for user in fo:
 						ids,names = user.split('|')
@@ -310,7 +310,7 @@ def pak():
 		linex()
 		mthd = input(' Choose: ')
 		clear()
-		print('\033[1;32m [1] \033[1;33mClone with 7+11 digit pass (v-fast) \n\033[1;32m [2]\033[1;33m Clone with auto pass (best) \n\033[1;32m [3]\033[1;33m Clone with auto pass (fast) ')
+		print('\033[1;35m [1] \033[1;34mClone with 7+11 digit pass (v-fast) \n\033[1;35m [2]\033[1;34m Clone with auto pass (best) \n\033[1;35m [3]\033[1;34m Clone with auto pass (fast) ')
 		linex()
 		pcs = input(' [?] Select: ')
 		for nmbr in range(limit):
@@ -364,7 +364,7 @@ def pak():
 def gmail():
 		os.system('rm -rf .re.txt')
 		clear()
-		print('\033[1;37m example: ramzan, ali, sajjad, faizan\033[1;97m')
+		print('\033[1;37m example: mukhlis, rehan, shahid, ali\033[1;97m')
 		linex()
 		first = input(' Put first name: ')
 		linex()
@@ -385,7 +385,7 @@ def gmail():
 		linex()
 		pxc = input(' Choose : ')
 		clear()
-		print('\033[1;32m [1] \033[1;33mMethod   (best) \033[1;32m \n [2] \033[1;33mMethod   (v-fast)  \033[1;32m \n [3] \033[1;33mMethod   (v-best)  \033[1;32m \n [4] \033[1;33mMethod   (slow) \033[1;32m \n [5] \033[1;33mMethod   (slow)  \033[1;32m \n [6] \033[1;33mMethod   (slow) ')
+		print('\033[1;35m [1] \033[1;36mMethod   (best) \033[1;35m \n [2] \033[1;36mMethod   (v-fast)  \033[1;35m \n [3] \033[1;36mMethod   (v-best)  \033[1;35m \n [4] \033[1;36mMethod   (slow) \033[1;35m \n [5] \033[1;36mMethod   (slow) ')
 		linex()
 		mthd = input(' Choose: ')
 		linex()
