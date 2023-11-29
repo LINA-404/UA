@@ -299,18 +299,18 @@ def menu():
 def pak():
 		user=[]
 		clear()
-		print('\033[1;35m Code example: 0306,0315,0335,0345')
-		code = input('\033[1;37m put code: ')
+		print('\033[1;32m Code example: 0306,0315,0335,0345\033[1;37m')
+		code = input('\033[1;35m put code: ')
 		try:
-			limit = int(input('\033[1;35m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
+			limit = int(input('\033[1;32m example: 2000, 3000, 5000, 10000\n\033[1;37m put limit: '))
 		except ValueError:
 			limit = 5000
 		clear()
-		print('\033[1;32m [1] \033[1;33mMethod   (best) \033[1;32m \n [2] \033[1;33mMethod   (v-fast)  \033[1;32m \n [3] \033[1;33mMethod   (v-best)  \033[1;32m \n [4] \033[1;33mMethod   (with cokies) ')
+		print('\033[1;32m [1] \033[1;35mMethod   (best) \033[1;32m \n [2] \033[1;35mMethod   (v-fast)  \033[1;32m \n [3] \033[1;35mMethod   (v-best)  \033[1;32m \n [4] \033[1;35mMethod   (with cokies) ')
 		linex()
 		mthd = input(' Choose: ')
 		clear()
-		print('\033[1;35m [1] \033[1;34mClone with 7+11 digit pass (v-fast) \n\033[1;35m [2]\033[1;34m Clone with auto pass (best) \n\033[1;35m [3]\033[1;34m Clone with auto pass (fast) ')
+		print('\033[1;35m [1] \033[1;32mClone with 7+11 digit pass (v-fast) \n\033[1;35m [2]\033[1;32m Clone with auto pass (best) \n\033[1;35m [3]\033[1;32m Clone with auto pass (fast)\n\033[1;35m [4] \033[1;32mClone with auto pass (slow-best) ')
 		linex()
 		pcs = input(' [?] Select: ')
 		for nmbr in range(limit):
@@ -326,7 +326,7 @@ def pak():
 			for psx in user:
 				ids = code+psx
 				if pcs in ['1','01']:
-					passlist = [psx,ids,'khankhan','khan1122','ali12345','khanbaba','pakistan','khan12345','ali1122','khankhan12345','khan','baloch','pubg','pubg1122']
+					passlist = [psx,ids,'kpk123','khankhan','khan1122','ali12345','khanbaba','pakistan','pak123','khanking','khan12345','ali1122','khankhan12345','khan','baloch','pubg','pubg1122','10002000','100200']
 				if pcs in ['2','02']:
 					passlist = [psx,ids,'khankhan','khan1122','ali12345','pakistan','khan12345','ali1122','baloch12345','khan','baloch','khan','pubg','pubg1122','malik786']
 				elif pcs in ['3','03']:
@@ -368,7 +368,7 @@ def gmail():
 		linex()
 		first = input(' Put first name: ')
 		linex()
-		print('\033[1;37m example: khan, ahmad, ali \033[1;97m')
+		print('\033[1;32m example: khan, ahmad, ali \033[1;37m')
 		linex()
 		last = input(' Put last name: ')
 		linex()
